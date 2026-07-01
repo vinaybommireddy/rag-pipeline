@@ -1,0 +1,1735 @@
+{
+  "strategy": "fixed-size",
+  "timestamp": "2026-07-01T14:43:43.025632",
+  "total_questions": 30,
+  "overall": {
+    "answer_correctness": 0.903,
+    "faithfulness": 0.767,
+    "retrieval_relevance": 1.0,
+    "citation_accuracy": 0.95
+  },
+  "by_category": {
+    "factual": {
+      "count": 12,
+      "correctness": 1.0,
+      "faithfulness": 1.0
+    },
+    "application": {
+      "count": 5,
+      "correctness": 0.939,
+      "faithfulness": 1.0
+    },
+    "multi_hop": {
+      "count": 5,
+      "correctness": 0.914,
+      "faithfulness": 1.0
+    },
+    "unanswerable": {
+      "count": 5,
+      "correctness": 1.0,
+      "faithfulness": 0.0
+    },
+    "ambiguous": {
+      "count": 3,
+      "correctness": 0.273,
+      "faithfulness": 0.333
+    }
+  },
+  "by_difficulty": {
+    "easy": {
+      "count": 12,
+      "correctness": 1.0
+    },
+    "medium": {
+      "count": 9,
+      "correctness": 0.723
+    },
+    "hard": {
+      "count": 4,
+      "correctness": 0.893
+    },
+    "unanswerable": {
+      "count": 5,
+      "correctness": 1.0
+    }
+  },
+  "results": [
+    {
+      "id": "Q001",
+      "category": "factual",
+      "difficulty": "easy",
+      "question": "What is Python?",
+      "golden_answer": "Python is a high-level, interpreted programming language known for its readability and versatility.",
+      "generated_answer": "Python is a high-level, interpreted programming language known for its readability and versatility [1]. It supports multiple programming paradigms including procedural, object-oriented, and functional programming [1]. The language emphasizes code readability with its use of significant indentation [1] and has a large standard library and a vibrant ecosystem of third-party packages [1]. Python is widely used in web development (with frameworks like Django and Flask) [3], data science, artificial intelligence, and automation [1], and is the most popular language for machine learning due to libraries like TensorFlow and PyTorch [2].",
+      "citations": [
+        1,
+        2,
+        3
+      ],
+      "correctness": {
+        "score": 1.0,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "100% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "4/4 sentences grounded",
+        "details": [
+          {
+            "sentence": "Python is a high-level, interpreted programming language kno...",
+            "overlap": 0.7,
+            "grounded": true
+          },
+          {
+            "sentence": "It supports multiple programming paradigms including procedu...",
+            "overlap": 0.667,
+            "grounded": true
+          },
+          {
+            "sentence": "The language emphasizes code readability with its use of sig...",
+            "overlap": 0.765,
+            "grounded": true
+          },
+          {
+            "sentence": "Python is widely used in web development (with frameworks li...",
+            "overlap": 0.769,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "python_guide.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 0.6666666666666666,
+        "all_verified": false,
+        "unsupported": [
+          1
+        ],
+        "details": [
+          {
+            "citation": 1,
+            "supported": false,
+            "reason": "THE USER ASKS: \"DOES THE FOLLOWING SOURCE CHUNK SUPPORT THE CLAIM MADE IN THE ANSWER?\" THEY PROVIDE A SOURCE CHUNK AND AN ANSWER EXCERPT THAT CITES [1] (PRESUMABLY THE SOURCE CHUNK). THE ANSWER EXCERPT INCLUDES SEVERAL CLAIMS, SOME OF WHICH ARE DIRECTLY FROM THE SOURCE CHUNK, BUT ALSO INCLUDES ADDITIONAL CLAIMS NOT IN THE SOURCE CHUNK: \"PYTHON IS WIDELY USED IN WEB DEVELOPMENT (WITH FRAMEWORKS LIKE DJANGO"
+          },
+          {
+            "citation": 2,
+            "supported": true,
+            "reason": "word overlap 29.1%"
+          },
+          {
+            "citation": 3,
+            "supported": true,
+            "reason": "word overlap 16.4%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q002",
+      "category": "factual",
+      "difficulty": "easy",
+      "question": "What programming paradigms does Python support?",
+      "golden_answer": "Python supports multiple programming paradigms including procedural, object-oriented, and functional programming.",
+      "generated_answer": "Python supports multiple programming paradigms including procedural, object-oriented, and functional programming [1].",
+      "citations": [
+        1
+      ],
+      "correctness": {
+        "score": 1.0,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "100% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "1/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "Python supports multiple programming paradigms including pro...",
+            "overlap": 0.7,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "python_guide.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "THE USER IS ASKING WHETHER THE SOURCE CHUNK SUPPORTS THE CLAIM MADE IN THE ANSWER EXCERPT. THE ANSWER EXCERPT STATES: \"PYTHON SUPPORTS MULTIPLE PROGRAMMING PARADIGMS INCLUDING PROCEDURAL, OBJECT-ORIENTED, AND FUNCTIONAL PROGRAMMING [1].\" THE SOURCE CHUNK SAYS: \"IT SUPPORTS MULTIPLE PROGRAMMING PARADIGMS INCLUDING PROCEDURAL, OBJECT-ORIENTED, AND FUNCTIONAL PROGRAMMING.\" THIS IS A DIRECT MATCH. SO THE ANSWER IS YES. THE REASON: THE SOURCE CHUNK"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q003",
+      "category": "factual",
+      "difficulty": "easy",
+      "question": "What is machine learning?",
+      "golden_answer": "Machine learning is a subset of artificial intelligence that enables systems to learn from data.",
+      "generated_answer": "Machine learning is a subset of artificial intelligence that enables systems to learn from data [1].",
+      "citations": [
+        1
+      ],
+      "correctness": {
+        "score": 1.0,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "100% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "1/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "Machine learning is a subset of artificial intelligence that...",
+            "overlap": 0.917,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "machine_learning.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "word overlap 91.7%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q004",
+      "category": "factual",
+      "difficulty": "easy",
+      "question": "What is supervised learning?",
+      "golden_answer": "Supervised learning uses labeled training data to build predictive models.",
+      "generated_answer": "Supervised learning uses labeled training data to build predictive models [1].",
+      "citations": [
+        1
+      ],
+      "correctness": {
+        "score": 1.0,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "100% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "1/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "Supervised learning uses labeled training data to build pred...",
+            "overlap": 0.8,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "machine_learning.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "web_development.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "THE USER IS ASKING WHETHER THE SOURCE CHUNK SUPPORTS THE CLAIM MADE IN THE ANSWER EXCERPT. THE ANSWER EXCERPT STATES: \"SUPERVISED LEARNING USES LABELED TRAINING DATA TO BUILD PREDICTIVE MODELS [1].\" THE SOURCE CHUNK CONTAINS THE EXACT SAME SENTENCE: \"SUPERVISED LEARNING USES LABELED TRAINING DATA TO BUILD PREDICTIVE MODELS.\" SO THE SOURCE CHUNK DIRECTLY SUPPORTS THE CLAIM. THE ANSWER SHOULD BE YES WITH A ONE-SENTENCE"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q005",
+      "category": "factual",
+      "difficulty": "easy",
+      "question": "What is unsupervised learning?",
+      "golden_answer": "Unsupervised learning finds hidden patterns in unlabeled data.",
+      "generated_answer": "Unsupervised learning finds hidden patterns in unlabeled data. [1]",
+      "citations": [
+        1
+      ],
+      "correctness": {
+        "score": 1.0,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "100% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "1/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "Unsupervised learning finds hidden patterns in unlabeled dat...",
+            "overlap": 1.0,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "machine_learning.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "THE USER IS ASKING WHETHER THE SOURCE CHUNK SUPPORTS THE CLAIM MADE IN THE ANSWER EXCERPT. THE ANSWER EXCERPT STATES: \"UNSUPERVISED LEARNING FINDS HIDDEN PATTERNS IN UNLABELED DATA. [1]\" THE SOURCE CHUNK INCLUDES THE EXACT SENTENCE: \"UNSUPERVISED LEARNING FINDS HIDDEN PATTERNS IN UNLABELED DATA.\" SO THE SOURCE CHUNK DIRECTLY SUPPORTS THE CLAIM. THE ANSWER SHOULD BE YES WITH A ONE-SENTENCE REASON"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q006",
+      "category": "factual",
+      "difficulty": "easy",
+      "question": "What is deep learning?",
+      "golden_answer": "Deep learning uses neural networks with many layers to model complex patterns.",
+      "generated_answer": "Deep learning uses neural networks with many layers to model complex patterns. [1]",
+      "citations": [
+        1
+      ],
+      "correctness": {
+        "score": 1.0,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "100% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "1/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "Deep learning uses neural networks with many layers to model...",
+            "overlap": 1.0,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "machine_learning.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "web_development.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "THE USER IS ASKING WHETHER THE SOURCE CHUNK SUPPORTS THE CLAIM MADE IN THE ANSWER EXCERPT. THE ANSWER EXCERPT STATES: \"DEEP LEARNING USES NEURAL NETWORKS WITH MANY LAYERS TO MODEL COMPLEX PATTERNS. [1]\" THE SOURCE CHUNK CONTAINS THE EXACT SAME SENTENCE: \"DEEP LEARNING USES NEURAL NETWORKS WITH MANY LAYERS TO MODEL COMPLEX PATTERNS.\" SO THE SOURCE CHUNK DIRECTLY SUPPORTS THE CLAIM. THE ANSWER SHOULD BE YES WITH A ONE-S"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q007",
+      "category": "factual",
+      "difficulty": "easy",
+      "question": "What is web development?",
+      "golden_answer": "Web development involves building websites and web applications.",
+      "generated_answer": "Web development involves building websites and web applications. It includes frontend development, which focuses on the user interface using HTML, CSS, and JavaScript, and backend development, which handles server-side logic, databases, and APIs. Python frameworks like Django and Flask are popular for backend development, and REST APIs allow communication between frontend and backend services [1].",
+      "citations": [
+        1
+      ],
+      "correctness": {
+        "score": 1.0,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "100% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "3/3 sentences grounded",
+        "details": [
+          {
+            "sentence": "Web development involves building websites and web applicati...",
+            "overlap": 0.833,
+            "grounded": true
+          },
+          {
+            "sentence": "It includes frontend development, which focuses on the user ...",
+            "overlap": 0.556,
+            "grounded": true
+          },
+          {
+            "sentence": "Python frameworks like Django and Flask are popular for back...",
+            "overlap": 0.875,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "web_development.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "word overlap 91.7%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q008",
+      "category": "factual",
+      "difficulty": "easy",
+      "question": "What does frontend development focus on?",
+      "golden_answer": "Frontend development focuses on the user interface using HTML, CSS, and JavaScript.",
+      "generated_answer": "Frontend development focuses on the user interface using HTML, CSS, and JavaScript. [1]",
+      "citations": [
+        1
+      ],
+      "correctness": {
+        "score": 1.0,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "100% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "1/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "Frontend development focuses on the user interface using HTM...",
+            "overlap": 0.7,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "web_development.txt"
+        ],
+        "retrieved_sources": [
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "word overlap 90.9%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q009",
+      "category": "factual",
+      "difficulty": "easy",
+      "question": "What does backend development handle?",
+      "golden_answer": "Backend development handles server-side logic, databases, and APIs.",
+      "generated_answer": "Backend development handles server-side logic, databases, and APIs [1].",
+      "citations": [
+        1
+      ],
+      "correctness": {
+        "score": 1.0,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "100% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "1/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "Backend development handles server-side logic, databases, an...",
+            "overlap": 0.5,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "web_development.txt"
+        ],
+        "retrieved_sources": [
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "word overlap 87.5%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q010",
+      "category": "factual",
+      "difficulty": "easy",
+      "question": "What are REST APIs used for?",
+      "golden_answer": "REST APIs allow communication between frontend and backend services.",
+      "generated_answer": "REST APIs are used to allow communication between frontend and backend services [1].",
+      "citations": [
+        1
+      ],
+      "correctness": {
+        "score": 1.0,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "100% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "1/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "REST APIs are used to allow communication between frontend a...",
+            "overlap": 0.8,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "web_development.txt"
+        ],
+        "retrieved_sources": [
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "THE USER IS ASKING WHETHER THE SOURCE CHUNK SUPPORTS THE CLAIM MADE IN THE ANSWER EXCERPT. THE ANSWER EXCERPT STATES: \"REST APIS ARE USED TO ALLOW COMMUNICATION BETWEEN FRONTEND AND BACKEND SERVICES [1].\" THE SOURCE CHUNK INCLUDES THE SENTENCE: \"REST APIS ALLOW COMMUNICATION BETWEEN FRONTEND AND BACKEND SERVICES.\" THIS DIRECTLY MATCHES THE CLAIM. SO THE ANSWER IS YES. THE REASON SHOULD BE ONE SENTENCE EXPLAINING THAT THE SOURCE CHUNK"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q011",
+      "category": "application",
+      "difficulty": "medium",
+      "question": "What is Python used for in the real world?",
+      "golden_answer": "Python is widely used in web development, data science, artificial intelligence, and automation.",
+      "generated_answer": "Python is widely used in web development (particularly backend development with frameworks like Django and Flask) [1][3], data science, artificial intelligence, and automation [1]. It is also the most popular language for machine learning due to libraries like TensorFlow and PyTorch [2].",
+      "citations": [
+        1,
+        2,
+        3
+      ],
+      "correctness": {
+        "score": 1.0,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "100% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "2/2 sentences grounded",
+        "details": [
+          {
+            "sentence": "Python is widely used in web development (particularly backe...",
+            "overlap": 0.722,
+            "grounded": true
+          },
+          {
+            "sentence": "It is also the most popular language for machine learning du...",
+            "overlap": 0.75,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "python_guide.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "word overlap 41.9%"
+          },
+          {
+            "citation": 2,
+            "supported": true,
+            "reason": "word overlap 51.6%"
+          },
+          {
+            "citation": 3,
+            "supported": true,
+            "reason": "word overlap 32.3%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q012",
+      "category": "application",
+      "difficulty": "medium",
+      "question": "What Python frameworks are used for backend web development?",
+      "golden_answer": "Python frameworks like Django and Flask are popular for backend development.",
+      "generated_answer": "Based on the provided context, Python frameworks like Django and Flask are popular for backend development [1].",
+      "citations": [
+        1
+      ],
+      "correctness": {
+        "score": 1.0,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "100% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "1/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "Based on the provided context, Python frameworks like Django...",
+            "overlap": 0.692,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "web_development.txt"
+        ],
+        "retrieved_sources": [
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "THE USER IS ASKING WHETHER THE SOURCE CHUNK SUPPORTS THE CLAIM MADE IN THE ANSWER EXCERPT. THE ANSWER EXCERPT STATES: \"BASED ON THE PROVIDED CONTEXT, PYTHON FRAMEWORKS LIKE DJANGO AND FLASK ARE POPULAR FOR BACKEND DEVELOPMENT [1].\" THE SOURCE CHUNK INCLUDES THE SENTENCE: \"PYTHON FRAMEWORKS LIKE DJANGO AND FLASK ARE POPULAR FOR BACKEND DEVELOPMENT.\" THIS DIRECTLY MATCHES THE CLAIM. SO THE ANSWER IS YES. THE REASON: THE"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q013",
+      "category": "application",
+      "difficulty": "medium",
+      "question": "What Python libraries are used for machine learning?",
+      "golden_answer": "Libraries like TensorFlow and PyTorch are used for machine learning in Python.",
+      "generated_answer": "Based on the provided context, Python libraries used for machine learning include TensorFlow and PyTorch [1].",
+      "citations": [
+        1
+      ],
+      "correctness": {
+        "score": 0.875,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "88% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "1/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "Based on the provided context, Python libraries used for mac...",
+            "overlap": 0.462,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "machine_learning.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "word overlap 50.0%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q014",
+      "category": "application",
+      "difficulty": "medium",
+      "question": "Why is Python popular for machine learning?",
+      "golden_answer": "Python is the most popular language for machine learning due to libraries like TensorFlow and PyTorch.",
+      "generated_answer": "Python is popular for machine learning because it has a large standard library and a vibrant ecosystem of third-party packages [1], and specifically due to powerful machine learning libraries like TensorFlow and PyTorch [2].",
+      "citations": [
+        1,
+        2
+      ],
+      "correctness": {
+        "score": 0.818,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "82% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "1/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "Python is popular for machine learning because it has a larg...",
+            "overlap": 0.636,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "machine_learning.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 0.5,
+        "all_verified": false,
+        "unsupported": [
+          1
+        ],
+        "details": [
+          {
+            "citation": 1,
+            "supported": false,
+            "reason": "THE USER IS ASKING WHETHER THE SOURCE CHUNK SUPPORTS THE CLAIM MADE IN THE ANSWER EXCERPT. THE ANSWER EXCERPT CLAIMS THAT PYTHON IS POPULAR FOR MACHINE LEARNING BECAUSE IT HAS A LARGE STANDARD LIBRARY AND A VIBRANT ECOSYSTEM OF THIRD-PARTY PACKAGES, CITING SOURCE [1]. THE SOURCE CHUNK MENTIONS THAT PYTHON HAS A LARGE STANDARD LIBRARY AND A VIBRANT ECOSYSTEM OF THIRD-PARTY PACKAGES, BUT IT DOES NOT EXPLICITLY MENTION MACHINE LEARNING OR WHY PYTHON"
+          },
+          {
+            "citation": 2,
+            "supported": true,
+            "reason": "word overlap 43.5%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q015",
+      "category": "application",
+      "difficulty": "medium",
+      "question": "What makes Python code readable?",
+      "golden_answer": "Python emphasizes code readability with its use of significant indentation.",
+      "generated_answer": "Python emphasizes code readability with its use of significant indentation [1].",
+      "citations": [
+        1
+      ],
+      "correctness": {
+        "score": 1.0,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "100% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "1/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "Python emphasizes code readability with its use of significa...",
+            "overlap": 0.778,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "python_guide.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "THE USER IS ASKING WHETHER THE SOURCE CHUNK SUPPORTS THE CLAIM MADE IN THE ANSWER EXCERPT. THE ANSWER EXCERPT STATES: \"PYTHON EMPHASIZES CODE READABILITY WITH ITS USE OF SIGNIFICANT INDENTATION [1].\" THE SOURCE CHUNK INCLUDES THE SENTENCE: \"THE LANGUAGE EMPHASIZES CODE READABILITY WITH ITS USE OF SIGNIFICANT INDENTATION.\" THIS DIRECTLY MATCHES THE CLAIM. SO THE ANSWER IS YES. THE REASON SHOULD BE ONE SENTENCE. I'LL REPLY WITH"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q016",
+      "category": "multi_hop",
+      "difficulty": "hard",
+      "question": "Can Python be used for both machine learning and web development?",
+      "golden_answer": "Yes. Python is widely used in web development (with frameworks like Django and Flask) and is also the most popular language for machine learning (with libraries like TensorFlow and PyTorch).",
+      "generated_answer": "Yes, Python can be used for both machine learning and web development. According to the provided documents, Python is widely used in web development [1] and popular frameworks like Django and Flask are used for backend development [2]. Additionally, Python is the most popular language for machine learning due to libraries like TensorFlow and PyTorch [3].",
+      "citations": [
+        1,
+        2,
+        3
+      ],
+      "correctness": {
+        "score": 0.9,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "90% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "3/3 sentences grounded",
+        "details": [
+          {
+            "sentence": "Yes, Python can be used for both machine learning and web de...",
+            "overlap": 0.6,
+            "grounded": true
+          },
+          {
+            "sentence": "According to the provided documents, Python is widely used i...",
+            "overlap": 0.688,
+            "grounded": true
+          },
+          {
+            "sentence": "Additionally, Python is the most popular language for machin...",
+            "overlap": 0.769,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "machine_learning.txt",
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 3,
+        "explanation": "3/3 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "word overlap 22.6%"
+          },
+          {
+            "citation": 2,
+            "supported": true,
+            "reason": "THE USER IS ASKING WHETHER THE SOURCE CHUNK SUPPORTS THE CLAIM MADE IN THE ANSWER EXCERPT. THE ANSWER EXCERPT CITES [2] FOR THE CLAIM THAT \"POPULAR FRAMEWORKS LIKE DJANGO AND FLASK ARE USED FOR BACKEND DEVELOPMENT\". THE SOURCE CHUNK STATES: \"PYTHON FRAMEWORKS LIKE DJANGO AND FLASK ARE POPULAR FOR BACKEND DEVELOPMENT.\" THIS DIRECTLY SUPPORTS THE CLAIM. SO THE ANSWER IS YES. THE REASON: THE SOURCE CHUNK EXPLICITLY STATES THAT"
+          },
+          {
+            "citation": 3,
+            "supported": true,
+            "reason": "word overlap 38.7%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q017",
+      "category": "multi_hop",
+      "difficulty": "hard",
+      "question": "How does Python relate to artificial intelligence and web development?",
+      "golden_answer": "Python is widely used in artificial intelligence and web development. For web development it powers backend frameworks like Django and Flask. For AI it supports machine learning via libraries like TensorFlow and PyTorch.",
+      "generated_answer": "Python is widely used in both artificial intelligence and web development. In web development, Python frameworks like Django and Flask are popular for backend development [2]. In artificial intelligence, Python is the most popular language for machine learning (a subset of AI) due to libraries like TensorFlow and PyTorch [3], and it's explicitly noted as being widely used in artificial intelligence [1].",
+      "citations": [
+        1,
+        2,
+        3
+      ],
+      "correctness": {
+        "score": 0.857,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "86% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "3/3 sentences grounded",
+        "details": [
+          {
+            "sentence": "Python is widely used in both artificial intelligence and we...",
+            "overlap": 0.875,
+            "grounded": true
+          },
+          {
+            "sentence": "In web development, Python frameworks like Django and Flask ...",
+            "overlap": 0.9,
+            "grounded": true
+          },
+          {
+            "sentence": "In artificial intelligence, Python is the most popular langu...",
+            "overlap": 0.667,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "machine_learning.txt",
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 3,
+        "explanation": "3/3 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "word overlap 30.3%"
+          },
+          {
+            "citation": 2,
+            "supported": true,
+            "reason": "word overlap 30.3%"
+          },
+          {
+            "citation": 3,
+            "supported": true,
+            "reason": "word overlap 45.5%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q018",
+      "category": "multi_hop",
+      "difficulty": "hard",
+      "question": "What technologies are needed to build a full web application with AI features?",
+      "golden_answer": "A full web application with AI features requires frontend technologies (HTML, CSS, JavaScript), backend frameworks like Django or Flask, REST APIs for communication, and Python machine learning libraries like TensorFlow or PyTorch for AI capabilities.",
+      "generated_answer": "To build a full web application with AI features, you would need:\n\n**Frontend technologies:** HTML, CSS, and JavaScript for the user interface [1]\n\n**Backend technologies:** Python frameworks like Django or Flask for server-side logic, databases, and APIs [1]\n\n**Communication layer:** REST APIs to enable communication between frontend and backend services [1]\n\n**AI/ML technologies:** Python with machine learning libraries such as TensorFlow and PyTorch, as Python is the most popular language for machine learning [2]\n\n**Core language:** Python, which is widely used in both web development and artificial intelligence, with a large ecosystem of third-party packages [3]\n\nThese technologies work together where the frontend handles user interaction, the backend manages server logic and integrates AI models, and REST APIs facilitate communication between them.",
+      "citations": [
+        1,
+        2,
+        3
+      ],
+      "correctness": {
+        "score": 0.926,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "93% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "1/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "To build a full web application with AI features, you would ...",
+            "overlap": 0.429,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "machine_learning.txt",
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 3,
+        "explanation": "3/3 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 0.3333333333333333,
+        "all_verified": false,
+        "unsupported": [
+          1,
+          2
+        ],
+        "details": [
+          {
+            "citation": 1,
+            "supported": false,
+            "reason": "THE USER IS ASKING WHETHER THE SOURCE CHUNK SUPPORTS THE CLAIM MADE IN THE ANSWER EXCERPT. THE ANSWER EXCERPT CITES [1] FOR SEVERAL POINTS: FRONTEND TECHNOLOGIES (HTML, CSS, JAVASCRIPT), BACKEND TECHNOLOGIES (PYTHON FRAMEWORKS LIKE DJANGO OR FLASK), AND COMMUNICATION LAYER (REST APIS). THE SOURCE CHUNK PROVIDED INCLUDES EXACTLY THOSE POINTS: \"WEB DEVELOPMENT INVOLVES BUILDING WEBSITES AND WEB APPLICATIONS. FRONTEND DEVELOPMENT FOCUSES ON THE"
+          },
+          {
+            "citation": 2,
+            "supported": false,
+            "reason": "THE USER IS ASKING WHETHER THE SOURCE CHUNK SUPPORTS THE CLAIM MADE IN THE ANSWER EXCERPT, SPECIFICALLY THE PART CITING [2]. THE ANSWER EXCERPT SAYS: \"AI/ML TECHNOLOGIES: PYTHON WITH MACHINE LEARNING LIBRARIES SUCH AS TENSORFLOW AND PYTORCH, AS PYTHON IS THE MOST POPULAR LANGUAGE FOR MACHINE LEARNING [2]\". THE SOURCE CHUNK STATES: \"PYTHON IS THE MOST POPULAR LANGUAGE FOR MACHINE LEARNING DUE TO"
+          },
+          {
+            "citation": 3,
+            "supported": true,
+            "reason": "word overlap 19.4%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q019",
+      "category": "multi_hop",
+      "difficulty": "medium",
+      "question": "What is the difference between supervised and unsupervised learning?",
+      "golden_answer": "Supervised learning uses labeled training data to build predictive models, while unsupervised learning finds hidden patterns in unlabeled data.",
+      "generated_answer": "Supervised learning uses labeled training data to build predictive models, while unsupervised learning finds hidden patterns in unlabeled data [1].",
+      "citations": [
+        1
+      ],
+      "correctness": {
+        "score": 1.0,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "100% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "1/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "Supervised learning uses labeled training data to build pred...",
+            "overlap": 0.812,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "machine_learning.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "word overlap 87.5%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q020",
+      "category": "multi_hop",
+      "difficulty": "hard",
+      "question": "How does deep learning relate to machine learning and AI?",
+      "golden_answer": "Deep learning is part of machine learning, which is itself a subset of artificial intelligence. Deep learning uses neural networks with many layers to model complex patterns.",
+      "generated_answer": "Based on the provided context, machine learning is a subset of artificial intelligence that enables systems to learn from data [1]. Deep learning uses neural networks with many layers to model complex patterns [1], which positions it as a technique within the machine learning field.",
+      "citations": [
+        1
+      ],
+      "correctness": {
+        "score": 0.889,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "89% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "2/2 sentences grounded",
+        "details": [
+          {
+            "sentence": "Based on the provided context, machine learning is a subset ...",
+            "overlap": 0.75,
+            "grounded": true
+          },
+          {
+            "sentence": "Deep learning uses neural networks with many layers to model...",
+            "overlap": 0.611,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "machine_learning.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "word overlap 65.6%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q021",
+      "category": "unanswerable",
+      "difficulty": "unanswerable",
+      "question": "What is the best database to use with Django?",
+      "golden_answer": "NOT_IN_CORPUS",
+      "generated_answer": "I don't have enough information in the provided documents.",
+      "citations": [],
+      "correctness": {
+        "score": 1.0,
+        "method": "unanswerable-check",
+        "correct": true,
+        "explanation": "Correctly abstained"
+      },
+      "faithfulness": {
+        "score": 0.0,
+        "grounded": false,
+        "explanation": "0/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "I don't have enough information in the provided documents...",
+            "overlap": 0.0,
+            "grounded": false
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "explanation": "unanswerable \u2014 no sources expected"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": []
+      }
+    },
+    {
+      "id": "Q022",
+      "category": "unanswerable",
+      "difficulty": "unanswerable",
+      "question": "What is the salary of a Python developer?",
+      "golden_answer": "NOT_IN_CORPUS",
+      "generated_answer": "I don't have enough information in the provided documents.",
+      "citations": [],
+      "correctness": {
+        "score": 1.0,
+        "method": "unanswerable-check",
+        "correct": true,
+        "explanation": "Correctly abstained"
+      },
+      "faithfulness": {
+        "score": 0.0,
+        "grounded": false,
+        "explanation": "0/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "I don't have enough information in the provided documents...",
+            "overlap": 0.0,
+            "grounded": false
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "explanation": "unanswerable \u2014 no sources expected"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": []
+      }
+    },
+    {
+      "id": "Q023",
+      "category": "unanswerable",
+      "difficulty": "unanswerable",
+      "question": "How do I install Python on Windows?",
+      "golden_answer": "NOT_IN_CORPUS",
+      "generated_answer": "I don't have enough information in the provided documents.",
+      "citations": [],
+      "correctness": {
+        "score": 1.0,
+        "method": "unanswerable-check",
+        "correct": true,
+        "explanation": "Correctly abstained"
+      },
+      "faithfulness": {
+        "score": 0.0,
+        "grounded": false,
+        "explanation": "0/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "I don't have enough information in the provided documents...",
+            "overlap": 0.0,
+            "grounded": false
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "explanation": "unanswerable \u2014 no sources expected"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": []
+      }
+    },
+    {
+      "id": "Q024",
+      "category": "unanswerable",
+      "difficulty": "unanswerable",
+      "question": "What is the capital of France?",
+      "golden_answer": "NOT_IN_CORPUS",
+      "generated_answer": "I don't have enough information in the provided documents.",
+      "citations": [],
+      "correctness": {
+        "score": 1.0,
+        "method": "unanswerable-check",
+        "correct": true,
+        "explanation": "Correctly abstained"
+      },
+      "faithfulness": {
+        "score": 0.0,
+        "grounded": false,
+        "explanation": "0/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "I don't have enough information in the provided documents...",
+            "overlap": 0.0,
+            "grounded": false
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "explanation": "unanswerable \u2014 no sources expected"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": []
+      }
+    },
+    {
+      "id": "Q025",
+      "category": "unanswerable",
+      "difficulty": "unanswerable",
+      "question": "What is the latest version of Python?",
+      "golden_answer": "NOT_IN_CORPUS",
+      "generated_answer": "I don't have enough information in the provided documents.",
+      "citations": [],
+      "correctness": {
+        "score": 1.0,
+        "method": "unanswerable-check",
+        "correct": true,
+        "explanation": "Correctly abstained"
+      },
+      "faithfulness": {
+        "score": 0.0,
+        "grounded": false,
+        "explanation": "0/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "I don't have enough information in the provided documents...",
+            "overlap": 0.0,
+            "grounded": false
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "explanation": "unanswerable \u2014 no sources expected"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": []
+      }
+    },
+    {
+      "id": "Q026",
+      "category": "ambiguous",
+      "difficulty": "medium",
+      "question": "What is the standard library?",
+      "golden_answer": "Python has a large standard library and a vibrant ecosystem of third-party packages.",
+      "generated_answer": "I don't have enough information in the provided documents.",
+      "citations": [],
+      "correctness": {
+        "score": 0.0,
+        "method": "keyword-overlap",
+        "correct": false,
+        "explanation": "0% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 0.0,
+        "grounded": false,
+        "explanation": "0/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "I don't have enough information in the provided documents...",
+            "overlap": 0.0,
+            "grounded": false
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "python_guide.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": []
+      }
+    },
+    {
+      "id": "Q027",
+      "category": "ambiguous",
+      "difficulty": "medium",
+      "question": "What are frameworks?",
+      "golden_answer": "Python frameworks like Django and Flask are popular for backend development. Frameworks provide structured ways to build applications.",
+      "generated_answer": "I don't have enough information in the provided documents.",
+      "citations": [],
+      "correctness": {
+        "score": 0.0,
+        "method": "keyword-overlap",
+        "correct": false,
+        "explanation": "0% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 0.0,
+        "grounded": false,
+        "explanation": "0/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "I don't have enough information in the provided documents...",
+            "overlap": 0.0,
+            "grounded": false
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "web_development.txt"
+        ],
+        "retrieved_sources": [
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": []
+      }
+    },
+    {
+      "id": "Q028",
+      "category": "ambiguous",
+      "difficulty": "medium",
+      "question": "What are neural networks?",
+      "golden_answer": "Neural networks are used in deep learning to model complex patterns using many layers.",
+      "generated_answer": "Based on the provided context, neural networks are mentioned in relation to deep learning: \"Deep learning uses neural networks with many layers to model complex patterns.\" [1]",
+      "citations": [
+        1
+      ],
+      "correctness": {
+        "score": 0.818,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "82% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "1/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "Based on the provided context, neural networks are mentioned...",
+            "overlap": 0.688,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "machine_learning.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "web_development.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "word overlap 61.1%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q029",
+      "category": "factual",
+      "difficulty": "easy",
+      "question": "What ecosystem does Python have?",
+      "golden_answer": "Python has a large standard library and a vibrant ecosystem of third-party packages.",
+      "generated_answer": "Python has a vibrant ecosystem of third-party packages [1][2].",
+      "citations": [
+        1,
+        2
+      ],
+      "correctness": {
+        "score": 1.0,
+        "method": "llm-judge",
+        "correct": true,
+        "explanation": "The golden answer mentions two key points: 1"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "1/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "Python has a vibrant ecosystem of third-party packages [1][2...",
+            "overlap": 0.571,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "python_guide.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "THE USER IS ASKING WHETHER THE SOURCE CHUNK SUPPORTS THE CLAIM MADE IN THE ANSWER EXCERPT. THE ANSWER EXCERPT STATES: \"PYTHON HAS A VIBRANT ECOSYSTEM OF THIRD-PARTY PACKAGES [1][2].\" THE SOURCE CHUNK INCLUDES THE SENTENCE: \"PYTHON HAS A LARGE STANDARD LIBRARY AND A VIBRANT ECOSYSTEM OF THIRD-PARTY PACKAGES.\" THIS DIRECTLY SUPPORTS THE CLAIM. SO THE ANSWER SHOULD BE YES, WITH A ONE-SENTENCE"
+          },
+          {
+            "citation": 2,
+            "supported": true,
+            "reason": "word overlap 57.1%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q030",
+      "category": "factual",
+      "difficulty": "easy",
+      "question": "What languages are used in frontend development?",
+      "golden_answer": "Frontend development uses HTML, CSS, and JavaScript.",
+      "generated_answer": "Frontend development uses HTML, CSS, and JavaScript [1].",
+      "citations": [
+        1
+      ],
+      "correctness": {
+        "score": 1.0,
+        "method": "keyword-overlap",
+        "correct": true,
+        "explanation": "100% keyword overlap"
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "grounded": true,
+        "explanation": "1/1 sentences grounded",
+        "details": [
+          {
+            "sentence": "Frontend development uses HTML, CSS, and JavaScript [1]...",
+            "overlap": 0.429,
+            "grounded": true
+          }
+        ]
+      },
+      "retrieval_relevance": {
+        "score": 1.0,
+        "hit_rate": 1.0,
+        "expected_sources": [
+          "web_development.txt"
+        ],
+        "retrieved_sources": [
+          "machine_learning.txt",
+          "web_development.txt",
+          "python_guide.txt"
+        ],
+        "hits": 1,
+        "explanation": "1/1 expected sources retrieved"
+      },
+      "citation_accuracy": {
+        "coverage": 1.0,
+        "all_verified": true,
+        "unsupported": [],
+        "details": [
+          {
+            "citation": 1,
+            "supported": true,
+            "reason": "word overlap 71.4%"
+          }
+        ]
+      }
+    }
+  ]
+}

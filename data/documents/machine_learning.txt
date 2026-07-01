@@ -1,0 +1,5 @@
+Machine learning is a subset of artificial intelligence that enables systems to learn from data.
+Supervised learning uses labeled training data to build predictive models.
+Unsupervised learning finds hidden patterns in unlabeled data.
+Deep learning uses neural networks with many layers to model complex patterns.
+Python is the most popular language for machine learning due to libraries like TensorFlow and PyTorch.

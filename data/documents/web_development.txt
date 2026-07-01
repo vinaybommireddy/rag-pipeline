@@ -1,0 +1,5 @@
+Web development involves building websites and web applications.
+Frontend development focuses on the user interface using HTML, CSS, and JavaScript.
+Backend development handles server-side logic, databases, and APIs.
+Python frameworks like Django and Flask are popular for backend development.
+REST APIs allow communication between frontend and backend services.

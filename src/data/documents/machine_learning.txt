@@ -1,0 +1,36 @@
+Machine Learning and Deep Learning
+
+Machine Learning (ML) is a subset of Artificial Intelligence that enables computer systems to learn from data without being explicitly programmed.
+
+Types of Machine Learning:
+1. Supervised Learning: Learning from labeled data
+   - Classification: Predicting categories (e.g., spam detection)
+   - Regression: Predicting continuous values (e.g., price prediction)
+
+2. Unsupervised Learning: Finding patterns in unlabeled data
+   - Clustering: Grouping similar data points
+   - Dimensionality reduction: Reducing number of features
+
+3. Reinforcement Learning: Learning through interaction and rewards
+
+Deep Learning is a specialized subset of Machine Learning that uses neural networks with multiple layers (hence "deep").
+
+Deep Learning Applications:
+- Computer Vision: Image classification, object detection, face recognition
+- Natural Language Processing: Text generation, machine translation, sentiment analysis
+- Speech Recognition: Converting audio to text
+
+Popular ML Libraries:
+- scikit-learn: Classical machine learning
+- TensorFlow: Deep learning framework by Google
+- PyTorch: Deep learning framework by Meta
+- Keras: High-level neural networks API
+
+Key Concepts:
+- Training Data: Used to teach the model
+- Validation Data: Used to tune hyperparameters
+- Test Data: Used to evaluate final performance
+- Overfitting: Model memorizes training data instead of generalizing
+- Underfitting: Model is too simple to capture patterns
+
+Machine Learning continues to transform industries through automation and predictive analytics.

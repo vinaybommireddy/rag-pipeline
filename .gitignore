@@ -1,0 +1,7 @@
+venv/
+.env
+__pycache__/
+data/chroma_db/
+chroma_db/
+data/bm25_index.pkl
+bm25_index.pkl

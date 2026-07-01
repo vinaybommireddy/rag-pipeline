@@ -1,0 +1,14 @@
+{
+  "fixed-size": {
+    "answer_correctness": 0.881,
+    "faithfulness": 0.733,
+    "retrieval_relevance": 1.0,
+    "citation_accuracy": 0.944
+  },
+  "recursive": {
+    "answer_correctness": 0.894,
+    "faithfulness": 0.767,
+    "retrieval_relevance": 1.0,
+    "citation_accuracy": 0.978
+  }
+}

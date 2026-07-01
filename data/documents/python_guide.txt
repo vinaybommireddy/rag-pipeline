@@ -1,0 +1,5 @@
+Python is a high-level, interpreted programming language known for its readability and versatility. 
+It supports multiple programming paradigms including procedural, object-oriented, and functional programming.
+Python is widely used in web development, data science, artificial intelligence, and automation.
+The language emphasizes code readability with its use of significant indentation.
+Python has a large standard library and a vibrant ecosystem of third-party packages.

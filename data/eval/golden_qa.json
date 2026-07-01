@@ -1,0 +1,242 @@
+[
+  {
+    "id": "Q001",
+    "category": "factual",
+    "question": "What is Python?",
+    "golden_answer": "Python is a high-level, interpreted programming language known for its readability and versatility.",
+    "relevant_sources": ["python_guide.txt"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "Q002",
+    "category": "factual",
+    "question": "What programming paradigms does Python support?",
+    "golden_answer": "Python supports multiple programming paradigms including procedural, object-oriented, and functional programming.",
+    "relevant_sources": ["python_guide.txt"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "Q003",
+    "category": "factual",
+    "question": "What is machine learning?",
+    "golden_answer": "Machine learning is a subset of artificial intelligence that enables systems to learn from data.",
+    "relevant_sources": ["machine_learning.txt"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "Q004",
+    "category": "factual",
+    "question": "What is supervised learning?",
+    "golden_answer": "Supervised learning uses labeled training data to build predictive models.",
+    "relevant_sources": ["machine_learning.txt"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "Q005",
+    "category": "factual",
+    "question": "What is unsupervised learning?",
+    "golden_answer": "Unsupervised learning finds hidden patterns in unlabeled data.",
+    "relevant_sources": ["machine_learning.txt"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "Q006",
+    "category": "factual",
+    "question": "What is deep learning?",
+    "golden_answer": "Deep learning uses neural networks with many layers to model complex patterns.",
+    "relevant_sources": ["machine_learning.txt"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "Q007",
+    "category": "factual",
+    "question": "What is web development?",
+    "golden_answer": "Web development involves building websites and web applications.",
+    "relevant_sources": ["web_development.txt"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "Q008",
+    "category": "factual",
+    "question": "What does frontend development focus on?",
+    "golden_answer": "Frontend development focuses on the user interface using HTML, CSS, and JavaScript.",
+    "relevant_sources": ["web_development.txt"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "Q009",
+    "category": "factual",
+    "question": "What does backend development handle?",
+    "golden_answer": "Backend development handles server-side logic, databases, and APIs.",
+    "relevant_sources": ["web_development.txt"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "Q010",
+    "category": "factual",
+    "question": "What are REST APIs used for?",
+    "golden_answer": "REST APIs allow communication between frontend and backend services.",
+    "relevant_sources": ["web_development.txt"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "Q011",
+    "category": "application",
+    "question": "What is Python used for in the real world?",
+    "golden_answer": "Python is widely used in web development, data science, artificial intelligence, and automation.",
+    "relevant_sources": ["python_guide.txt"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "Q012",
+    "category": "application",
+    "question": "What Python frameworks are used for backend web development?",
+    "golden_answer": "Python frameworks like Django and Flask are popular for backend development.",
+    "relevant_sources": ["web_development.txt"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "Q013",
+    "category": "application",
+    "question": "What Python libraries are used for machine learning?",
+    "golden_answer": "Libraries like TensorFlow and PyTorch are used for machine learning in Python.",
+    "relevant_sources": ["machine_learning.txt"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "Q014",
+    "category": "application",
+    "question": "Why is Python popular for machine learning?",
+    "golden_answer": "Python is the most popular language for machine learning due to libraries like TensorFlow and PyTorch.",
+    "relevant_sources": ["machine_learning.txt"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "Q015",
+    "category": "application",
+    "question": "What makes Python code readable?",
+    "golden_answer": "Python emphasizes code readability with its use of significant indentation.",
+    "relevant_sources": ["python_guide.txt"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "Q016",
+    "category": "multi_hop",
+    "question": "Can Python be used for both machine learning and web development?",
+    "golden_answer": "Yes. Python is widely used in web development (with frameworks like Django and Flask) and is also the most popular language for machine learning (with libraries like TensorFlow and PyTorch).",
+    "relevant_sources": ["python_guide.txt", "machine_learning.txt", "web_development.txt"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "Q017",
+    "category": "multi_hop",
+    "question": "How does Python relate to artificial intelligence and web development?",
+    "golden_answer": "Python is widely used in artificial intelligence and web development. For web development it powers backend frameworks like Django and Flask. For AI it supports machine learning via libraries like TensorFlow and PyTorch.",
+    "relevant_sources": ["python_guide.txt", "machine_learning.txt", "web_development.txt"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "Q018",
+    "category": "multi_hop",
+    "question": "What technologies are needed to build a full web application with AI features?",
+    "golden_answer": "A full web application with AI features requires frontend technologies (HTML, CSS, JavaScript), backend frameworks like Django or Flask, REST APIs for communication, and Python machine learning libraries like TensorFlow or PyTorch for AI capabilities.",
+    "relevant_sources": ["web_development.txt", "machine_learning.txt", "python_guide.txt"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "Q019",
+    "category": "multi_hop",
+    "question": "What is the difference between supervised and unsupervised learning?",
+    "golden_answer": "Supervised learning uses labeled training data to build predictive models, while unsupervised learning finds hidden patterns in unlabeled data.",
+    "relevant_sources": ["machine_learning.txt"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "Q020",
+    "category": "multi_hop",
+    "question": "How does deep learning relate to machine learning and AI?",
+    "golden_answer": "Deep learning is part of machine learning, which is itself a subset of artificial intelligence. Deep learning uses neural networks with many layers to model complex patterns.",
+    "relevant_sources": ["machine_learning.txt"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "Q021",
+    "category": "unanswerable",
+    "question": "What is the best database to use with Django?",
+    "golden_answer": "NOT_IN_CORPUS",
+    "relevant_sources": [],
+    "difficulty": "unanswerable"
+  },
+  {
+    "id": "Q022",
+    "category": "unanswerable",
+    "question": "What is the salary of a Python developer?",
+    "golden_answer": "NOT_IN_CORPUS",
+    "relevant_sources": [],
+    "difficulty": "unanswerable"
+  },
+  {
+    "id": "Q023",
+    "category": "unanswerable",
+    "question": "How do I install Python on Windows?",
+    "golden_answer": "NOT_IN_CORPUS",
+    "relevant_sources": [],
+    "difficulty": "unanswerable"
+  },
+  {
+    "id": "Q024",
+    "category": "unanswerable",
+    "question": "What is the capital of France?",
+    "golden_answer": "NOT_IN_CORPUS",
+    "relevant_sources": [],
+    "difficulty": "unanswerable"
+  },
+  {
+    "id": "Q025",
+    "category": "unanswerable",
+    "question": "What is the latest version of Python?",
+    "golden_answer": "NOT_IN_CORPUS",
+    "relevant_sources": [],
+    "difficulty": "unanswerable"
+  },
+  {
+    "id": "Q026",
+    "category": "ambiguous",
+    "question": "What is the standard library?",
+    "golden_answer": "Python has a large standard library and a vibrant ecosystem of third-party packages.",
+    "relevant_sources": ["python_guide.txt"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "Q027",
+    "category": "ambiguous",
+    "question": "What are frameworks?",
+    "golden_answer": "Python frameworks like Django and Flask are popular for backend development. Frameworks provide structured ways to build applications.",
+    "relevant_sources": ["web_development.txt"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "Q028",
+    "category": "ambiguous",
+    "question": "What are neural networks?",
+    "golden_answer": "Neural networks are used in deep learning to model complex patterns using many layers.",
+    "relevant_sources": ["machine_learning.txt"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "Q029",
+    "category": "factual",
+    "question": "What ecosystem does Python have?",
+    "golden_answer": "Python has a large standard library and a vibrant ecosystem of third-party packages.",
+    "relevant_sources": ["python_guide.txt"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "Q030",
+    "category": "factual",
+    "question": "What languages are used in frontend development?",
+    "golden_answer": "Frontend development uses HTML, CSS, and JavaScript.",
+    "relevant_sources": ["web_development.txt"],
+    "difficulty": "easy"
+  }
+]
